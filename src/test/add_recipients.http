@@ -1,0 +1,9 @@
+### Add two recipients to the mailing list
+POST http://localhost:8000/api/mailing-list
+Content-Type: application/json
+x-api-key: your-secure-api-key-here
+
+[
+  { "name": "John Doe", "email": "johndoe@example.com" },
+  { "name": "Jane Doe", "email": "janedoe@example.com" }
+]

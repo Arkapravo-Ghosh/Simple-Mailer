@@ -1,0 +1,18 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: simple-mailer:latest
+    env_file:
+      - .env.development
+    ports:
+      - "8000:8000"
+    command: npm run dev
+    environment:
+      - PRODUCTION=false
+    working_dir: /usr/src/app
+    tty: true
+    volumes:
+      - ./:/usr/src/app:delegated
+      - node_modules:/usr/src/app/node_modules

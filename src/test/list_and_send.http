@@ -1,0 +1,13 @@
+### List recipients
+GET http://localhost:8000/api/mailing-list
+x-api-key: your-secure-api-key-here
+
+### Send test broadcast (sends generated HTML to everyone)
+POST http://localhost:8000/api/mailing-list/send
+Content-Type: application/json
+x-api-key: your-secure-api-key-here
+
+{
+  "subject": "Test broadcast from Simple Mailer",
+  "text": "This is a test plain text fallback message."
+}

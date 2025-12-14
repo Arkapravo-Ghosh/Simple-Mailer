@@ -1,0 +1,29 @@
+### Delete a single recipient by email
+DELETE http://localhost:8000/api/mailing-list
+Content-Type: application/json
+x-api-key: your-secure-api-key-here
+
+{
+  "identifiers": "janedoe@example.com"
+}
+
+### Delete multiple recipients by email
+DELETE http://localhost:8000/api/mailing-list
+Content-Type: application/json
+x-api-key: your-secure-api-key-here
+
+{
+  "identifiers": [
+    "johndoe@example.com",
+    "janedoe@example.com"
+  ]
+}
+
+### Delete by UUID
+DELETE http://localhost:8000/api/mailing-list
+Content-Type: application/json
+x-api-key: your-secure-api-key-here
+
+{
+  "identifiers": "be6f5643-b252-4101-bc8a-09e278a1ef02"
+}

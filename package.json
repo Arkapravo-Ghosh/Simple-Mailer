@@ -1,0 +1,50 @@
+{
+  "name": "simple-mailer",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./dist/app.js",
+  "scripts": {
+    "start": "node ./dist/app.js",
+    "preview": "tsx -r dotenv/config src/app.ts dotenv_config_path=./.env.production",
+    "dev": "tsx watch -r dotenv/config src/app.ts dotenv_config_path=./.env.development",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "build": "pkgroll --src ./src --dist ./dist --entry ./src/app.ts --name app.js --compress",
+    "clean": "rm -rf ./dist"
+  },
+  "keywords": [],
+  "author": "Arkapravo-Ghosh",
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@typescript-eslint/eslint-plugin": "^8.49.0",
+    "@typescript-eslint/parser": "^8.49.0",
+    "dotenv": "^17.2.3",
+    "eslint": "^9.39.2",
+    "globals": "^16.5.0",
+    "pkgroll": "^2.21.4",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.49.0"
+  },
+  "dependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/http-errors": "^2.0.5",
+    "@types/mongoose": "^5.11.96",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^25.0.2",
+    "@types/nodemailer": "^7.0.4",
+    "@types/uuid": "^10.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "http": "^0.0.1-security",
+    "http-errors": "^2.0.1",
+    "mongoose": "^9.0.1",
+    "morgan": "^1.10.1",
+    "nodemailer": "^7.0.11",
+    "uuid": "^13.0.0"
+  }
+}

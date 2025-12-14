@@ -1,0 +1,3 @@
+### Example unsubscribe link
+# Open in browser or GET via REST client
+GET http://localhost:8000/unsubscribe?uuid=be6f5643-b252-4101-bc8a-09e278a1ef02
